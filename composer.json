@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "pantheon-upstreams/upstream-configuration": "self.version",
+        "pantheon-upstreams/upstream-configuration": "dev-main",
         "composer/installers": "^1.9",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-recommended": "^9.2",
@@ -62,6 +62,16 @@
             "drupal/core": "-p2"
         }
     },
+    "autoload": {
+        "classmap": [
+            "upstream-configuration/scripts/ComposerScripts.php"
+        ]
+    },
+    "scripts": {
+        "pre-update-cmd": [
+            "DrupalWithComposer\\ComposerScripts::preUpdate"
+        ]
+    },
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
@@ -71,7 +81,8 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
-            "drupal/core-composer-scaffold": true
+            "drupal/core-composer-scaffold": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
         }
     }
 }
