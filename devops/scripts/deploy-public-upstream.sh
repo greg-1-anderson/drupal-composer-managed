@@ -47,6 +47,8 @@ for commit in "${commits[@]}"; do
   if [[ -z "$commit" ]] ; then
     continue
   fi
+  echo "Adding $commit:"
+  git log --format=%B -n 1 "$commit"
   git cherry-pick -n "$commit" 2>&1
   # Product request - single commit per release
   # The commit message from the last commit will be used.
