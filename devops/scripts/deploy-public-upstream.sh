@@ -1,6 +1,6 @@
 #!/bin/bash
 # This script is pretty tailored to assuming it's running in the CircleCI environment / a fresh git clone.
-# It mirrors most commits from `pantheon-systems/drupal-recommended:release` to `pantheon-upstreams/drupal-recommended`.
+# It mirrors most commits from `pantheon-systems/drupal-with-composer:release` to `pantheon-upstreams/drupal-with-composer`.
 
 set -euo pipefail
 
