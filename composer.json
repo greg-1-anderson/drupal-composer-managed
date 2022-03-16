@@ -69,8 +69,14 @@
     },
     "scripts": {
         "pre-update-cmd": [
-            "DrupalWithComposer\\ComposerScripts::preUpdate"
+            "DrupalComposerManaged\\ComposerScripts::preUpdate"
+        ],
+        "upstream-require": [
+            "DrupalComposerManaged\\ComposerScripts::upstreamRequire"
         ]
+    },
+    "scripts-descriptions": {
+        "upstream-require": "Add a dependency to an upstream. See https://pantheon.io/docs/create-custom-upstream for information on creating custom upstreams."
     },
     "config": {
         "preferred-install": "dist",
