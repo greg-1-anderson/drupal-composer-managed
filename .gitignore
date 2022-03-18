@@ -16,6 +16,8 @@
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest
 
+# Ignore authentication files provided by the Customer Secrets Service
+/auth.json
 
 # Ignore custom modules managed by Composer.
 #
